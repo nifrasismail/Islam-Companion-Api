@@ -1,0 +1,127 @@
+The Islam Companion Api support following functions. Each function is listed below along with an example url and example parameters. To change the parameters, edit the values in the php parameters array e.g change the language or narrator and then pass the parameters array as an argument to the http_build_query_function (http://php.net/manual/en/function.http-build-query.php). It will return the complete url parameter string.
+
+The possible values for the parameters are given for each function. Parameters such as module, option, database_type, request_type, output_format and api_key that are common to all Api functions should be left unchanged. The possible values for narrator and language can be found [here]().
+
+1. **Fetching Holy Quran Navigator**
+
+It returns the html for displaying a Holy Quran navigator.
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_holy_quran_navigator&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Bnarrator%5D=Mohammed+Marmaduke+William+Pickthall&parameters%5Brequest_type%5D=local&parameters%5Blanguage%5D=English&parameters%5Bdatabase_type%5D=mysql&parameters%5Bsura%5D=1&parameters%5Bruku%5D=1&parameters%5Bdivision%5D=ruku&parameters%5Bdivision_number%5D=1&parameters%5Bayat%5D=1&parameters%5Btemplate%5D=website&parameters%5Btools%5D=&parameters%5Boptions%5D=search%2Caudio%2Clayout%2Csubscription%2Csura-ruku-ayat%2Clanguage-narrator-division&parameters%5Blayout%5D=double+column&parameters%5Baction%5D=current
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_holy_quran_navigator", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("narrator" => "Mohammed Marmaduke William Pickthall", "language" => "English", "sura" => "1", "ruku" => "1", "database_type" => "mysql", "request_type" => "local", "division" => "ruku", "division_number" => "1", "ayat" => "1", "template" => "website", "tools" => "", "options" => "search,audio,layout,subscription,sura-ruku-ayat,language-narrator-division", "layout" => "double column", "action" => "current"));
+
+It requires following parameters:
+
+**narrator**: the narrator for the Holy Quran verse text
+**language**: the language for the Holy Quran verse text
+**sura**: the current sura number (between 1 and 114)
+**ruku**: the current sura ruku number (between 1 and 40)
+**division**: the division of the Holy Quran (ruku, juz, hizb, manzil and page)
+**division number**: the current division number (between 1 and 604)
+**ayat**: the sura ayat number (between 1 and 286)
+**template**: the type of Holy Quran navigator (it can have one of these values: plain, website and dashboard)
+**tools**: the tools available on the Holy Quran navigator (it can have one or more of these values: copy, dictionary links, shortcode, scroll to top, highlight text)
+**options**: the options available on the Holy Quran navigator (it can have one or more of these values: search,audio,layout,subscription,sura-ruku-ayat,language-narrator-division)
+**layout**: the layout of the Holy Quran verse text (it can have one of these values: paragraph~double column)
+
+2. **Fetching Holy Quran Verse Text**
+
+It returns the requested Holy Quran verse
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_verse_text&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&action=holyqurandashboardwidget&plugin_action=fetch_navigator_data&state=eyJkaXZpc2lvbl9udW1iZXIiOjEsInN1cmEiOiIxIiwicnVrdSI6IjEiLCJhY3Rpb24iOiJuZXh0IiwidGVtcGxhdGUiOiJkYXNoYm9hcmQiLCJkaXZpc2lvbiI6InJ1a3UiLCJuYXJyYXRvciI6Ik1vaGFtbWVkIE1hcm1hZHVrZSBXaWxsaWFtIFBpY2t0aGFsbCIsImxhbmd1YWdlIjoiRW5nbGlzaCIsImF5YXQiOiI3In0%253D&view=backend&plugin=IC_HolyQuranDashboardWidget&parameters%5Bnarrator%5D=Abul+A%27ala+Maududi&parameters%5Brequest_type%5D=local&parameters%5Blanguage%5D=Urdu&parameters%5Bdatabase_type%5D=mysql&parameters%5Bayas%5D=1%3A1%2C1%3A2%2C1%3A3&parameters%5Bcontainer%5D=plain+text&parameters%5Bcss_classes%5D=&parameters%5Btransformation%5D=none
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_verse_text", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("narrator" => "Mohammed Marmaduke William Pickthall", "request_type" => "local", "language" => "English", "database_type" => "mysql", "ayas" => "1:1, 1:2", "container" => "plain text", "transformation" => "none", "css_classes" => ""));
+
+**narrator**: the narrator for the Holy Quran verse text
+**language**: the language for the Holy Quran verse text
+**ayas**: the list of sura ayas to fetch
+**container**: the layout for the ayat text (it can have one of these values: plain text, list)
+**css_classes**: the custom css classes to be applied to the ayat text
+
+3) Fetching Holy Quran Search Results:
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_holy_quran_search_results&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&action=holyqurandashboardwidget&plugin_action=fetch_navigator_data&state=eyJkaXZpc2lvbl9udW1iZXIiOjEsInN1cmEiOiIxIiwicnVrdSI6IjEiLCJhY3Rpb24iOiJuZXh0IiwidGVtcGxhdGUiOiJkYXNoYm9hcmQiLCJkaXZpc2lvbiI6InJ1a3UiLCJuYXJyYXRvciI6Ik1vaGFtbWVkIE1hcm1hZHVrZSBXaWxsaWFtIFBpY2t0aGFsbCIsImxhbmd1YWdlIjoiRW5nbGlzaCIsImF5YXQiOiI3In0%253D&view=backend&plugin=IC_HolyQuranDashboardWidget&parameters%5Bnarrator%5D=Mohammed+Marmaduke+William+Pickthall&parameters%5Brequest_type%5D=local&parameters%5Blanguage%5D=English&parameters%5Bdatabase_type%5D=mysql&parameters%5Bsearch_text%5D=messenger&parameters%5Bpage_number%5D=1&parameters%5Blayout%5D=plain
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_holy_quran_search_results", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("narrator" => "Mohammed Marmaduke William Pickthall", "request_type" => "local", "language" => "English", "database_type" => "mysql", "search_text" => 'messenger', 'page_number' => '1','layout' => 'plain'));
+
+**narrator**: the narrator for the Holy Quran verse text
+**language**: the language for the Holy Quran verse text
+**search_text**: the text used to search. the response will contain only verses that contains the search text
+**page_number**: the page number of the search results
+**layout**: the layout for the search results (it can have one of these values: plain, navigator)
+
+4) Fetching Holy Quran Verses for Email:
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_holy_quran_verses_for_email&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Bnarrator%5D=Mohammed+Marmaduke+William+Pickthall&parameters%5Brequest_type%5D=local&parameters%5Blanguage%5D=English&parameters%5Bdatabase_type%5D=mysql&parameters%5Bsearch_text%5D=messenger&parameters%5Bnumber_of_results%5D=10&parameters%5Bresult_type%5D=ruku&parameters%5Bstart%5D=1&parameters%5Border%5D=random&parameters%5Btimes%5D=10%3A00&parameters%5Bemail_address%5D=nadir%40islamcompanion.org
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_holy_quran_verses_for_email", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("narrator" => "Mohammed Marmaduke William Pickthall", "request_type" => "local", "language" => "English", "database_type" => "mysql", "search_text" => 'messenger', 'number_of_results' => '10','result_type' => 'ruku', 'start' => '1', 'order' => 'sequence', 'times' => '10:00', 'email_address' => 'nadir@islamcompanion.org'));
+
+**narrator**: the narrator for the Holy Quran verse text
+**language**: the language for the Holy Quran verse text
+**search_text**: the text used to search. the response will contain only verses that match the search text
+**number_of_results**: the number of results to return
+**result_type**: the organization of the Holy Quran verses. it can have one of these values: ayat, ruku. ruku implies, complete ruku will be returned that contains the search text. ayat implies only the ayat containing the search text is returned
+**start**: the starting verse in the search results from which the results are returned
+**order**: the ordering of the verses. it can have one of these values: sequence, random. sequence implies the verses that are returned from the search results are in sequence. random implies the verses that are returned from the search results are chosen randomly
+**times**: the times at which the subscription email should be sent
+**email_address**: the email address to which the subscription email should be sent
+
+5) Fetching Holy Quran Meta Data
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_holy_quran_meta_data&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Btype%5D=all&parameters%5Brequest_type%5D=local&parameters%5Bdatabase_type%5D=mysql
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_holy_quran_meta_data", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("type" => "all", "request_type" => "local", "database_type" => "mysql"));
+
+**type**: the type of meta data to return. it can have one of following values: all, sura, language, translator, language and translator or sura, language and translator
+
+6) Fetching Hadith Navigator:
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_hadith_navigator&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Bdatabase_type%5D=mysql&parameters%5Brequest_type%5D=local&parameters%5Bhadith_language%5D=English&parameters%5Bhadith_source%5D=Sahih+Muslim&parameters%5Bhadith_book%5D=Book+%3A+1.+Faith&parameters%5Bhadith_title%5D=Chapter+001&parameters%5Btemplate%5D=website&parameters%5Btools%5D=&parameters%5Baction%5D=current&parameters%5Boptions%5D=book-title%2C+source%2C+search%2C+subscription
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_hadith_navigator", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("database_type" => "mysql", "request_type" => "local", "hadith_language" => "English", "hadith_source" => "Sahih Muslim", "hadith_book" => "Book : 1. Faith", "hadith_title" => "Chapter 001", "template" => "website", "tools" => "", "action" => "current", "options" => "book-title, source, search, subscription"));
+
+**hadith_source**: the source for the Hadith text. it can have one of following values: Sahih Muslim, Sahih Bukhari, Abu Dawud, Authentic Supplications of the Prophet, Hadith Qudsi, An Nawawi's Fourty Hadiths, Maliks Muwatta, Shamaa-il Tirmidhi
+**hadith_book**: the name of the Hadith Book
+**hadith_title**: the title within the Hadith Book
+**template**: the template used to display the Hadith Navigator. it can have one of the following values: website or dashboard
+**tools**: the tools provided by the Hadith Navigator. it can have one of the following values: copy, dictionary links, shortcode, scroll to top, highlight text
+**options**: book-title, source, search, subscription
+
+7) Fetching Hadith Search Results
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_hadith_search_results&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Brequest_type%5D=local&parameters%5Blanguage%5D=English&parameters%5Bdatabase_type%5D=mysql&parameters%5Bsearch_text%5D=messenger&parameters%5Blayout%5D=plain&parameters%5Bpage_number%5D=1
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_hadith_search_results", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("request_type" => "local", "language" => "English", "database_type" => "mysql", "search_text" => "messenger", "layout" => "plain", "page_number" => "1"));
+
+**search_text**: the text used to search. the response will contain only hadith that contains the search text
+**page_number**: the page number of the search results
+**layout**: the layout for the search results (it can have one of these values: plain, navigator)
+
+8) Fetching Hadith Text for Email:
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_hadith_text_for_email&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Blanguage%5D=English&parameters%5Brequest_type%5D=local&parameters%5Bdatabase_type%5D=mysql&parameters%5Bsearch_text%5D=messenger&parameters%5Bnumber_of_results%5D=5&parameters%5Bstart%5D=1&parameters%5Border%5D=random&parameters%5Btimes%5D=10%3A00&parameters%5Bemail_address%5D=nadir%40pakjiddat.pk
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_hadith_text_for_email", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("language" => "English", "request_type" => "local", "database_type" => "mysql", "search_text" => "messenger", "number_of_results" => "5", "start" => "1", "order" => "random", "times" => "10:00", "email_address" => "nadir@pakjiddat.pk"));
+
+**search_text**: the text used to search. the response will contain only hadith that match the search text
+**number_of_results**: the number of results to return
+**start**: the starting verse in the search results from which the results are returned
+**order**: the ordering of the verses. it can have one of these values: sequence, random. sequence implies the hadith text that is returned from the search results is in sequence. random implies the hadith text that is returned from the search results is chosen randomly
+**times**: the times at which the subscription email should be sent
+**email_address**: the email address to which the subscription email should be sent
+
+9) Fetching Hadith Text:
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_hadith_text&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Blanguage%5D=English&parameters%5Brequest_type%5D=local&parameters%5Bdatabase_type%5D=mysql&parameters%5Bhadith_numbers%5D=1%2C2%2C3%2C4%2C5%2C6&parameters%5Bcontainer%5D=plain text&parameters%5Bcss_classes%5D=
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_hadith_text", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("language" => "English", "request_type" => "local", "database_type" => "mysql", "hadith_numbers" => "1,2,3,4,5,6", "container" => "list", "css_classes" => ""));
+
+**hadith_numbers**: the list of hadith numbers
+**container**: the layout for the hadith text (it can have one of these values: plain text~paragraph~list)
+**css_classes**: the custom css classes to be applied to the hadith text
+
+10) Fetching Hadith Meta Data:
+
+example url: http://dev.islamcompanion.org/index.php?module=IslamCompanionApi&option=get_hadith_meta_data&output_format=json&api_key=cfFFmhZjuLsy7W3KVrnT8CGg&parameters%5Btype%5D=all&parameters%5Brequest_type%5D=local&parameters%5Bdatabase_type%5D=mysql
+
+example parameters: array("module" => "IslamCompanionApi", "option" => "get_hadith_meta_data", "output_format" => "json", "api_key" => "cfFFmhZjuLsy7W3KVrnT8CGg", "parameters" => array("request_type" => "local", "database_type" => "mysql"));

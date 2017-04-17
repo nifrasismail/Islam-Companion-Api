@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>{title}</title>     
+	<style>
+	h2, caption, #hadith-meta {
+	  text-align: center;
+	}
+
+	footer {
+	  text-align: center;
+	}
+
+	#hadith-meta {
+	  text-align: left;
+	  width: 100%;
+	  padding-left: 15%;
+	}
+	</style>
+   </head>
+   <body>
+   <header>
+       <h2>Hadith of Holy Prophet (P.B.U.H)</h2>
+       <hr/>
+   </header>
+   <article>
+     {body}
+   </article>
+   <hr/>
+   <table id="hadith-meta">
+     <caption><b>Current Subscription</b></caption>
+     <tbody>
+       <tr>
+         <td>Keywords: </td>
+         <td><b>{hadith_keywords}</b></td>
+         <td>Times: </td>
+         <td><b>{hadith_times}</b></td>
+         <td>Number of Hadith: </td>
+         <td><b>{hadith_count}</b></td>
+       </tr>          
+       <tr>
+         <td>Email Addresses: </td>
+         <td><b>{email_addresses}</b></td>
+         <td>Hadith Order: </td>
+         <td><b>{hadith_order}</b></td>
+         <td>Unsubscribe: </td>
+         <td><b><a href='{unsubscribe_link}'>Unsubscribe</a></b></td>
+       </tr>
+     </tbody>
+   </table>
+   <hr/>
+   <footer>
+       Powered by <a href='http://www.islamcompanion.org'>Islam Companion</a>
+   </footer>
+   </body>
+</html>

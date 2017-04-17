@@ -1,0 +1,77 @@
+Changelog:
+
+1.1.5 (February 16, 2016)
+	1) Added optional parameter callback to RenderTemplateFile function in Template class
+	2) Added Collection class to utilitites package
+	
+1.1.4 (February 9, 2016)
+	1) Corrected bug in SendEmail function in Email.php
+	
+1.1.3 (February 7, 2016)
+	1) Updated Reflection.php. Corrected bugs in validating method parameters
+	2) Added "`" character to table names in DatabaseFunctions.php
+	
+1.1.2 (February 5, 2016)
+	1) Added function IsBase64 to String class. It checks if given string is base64 encoded
+	2) Updated DecodeData function of Encryption class. It returns the original data if it cannot be decoded
+	
+1.1.1 (January 25, 2016)
+	1) Added check for no function parameters and no return value to Reflection class
+	2) Added ExportToRss function to String class. It allows exporting data to rss format
+	
+1.1.0 (January 8, 2016)
+    1) Renamed the object property is_browser_application to context in the class ErrorHandler
+    2) Added a new class to the Utilities Framework package called Reflection
+    3) Added new functions df_create_table, df_drop_column and df_rename_column to DatabaseFunctions class    
+    4) Added a new class called Logging to utilities package. It allows logging test data, variable data, error data and access data
+    5) Removed email, log file and web hooks from ErrorHandler class file
+    6) Added a new class called Profiling to utilities package. It provides profiling information about functions. e.g execution time, stack trace etc
+    7) Added a new parameter called application_folder to ErrorHandling class. It is used to determine if the error is raised by the application or by an external application
+    
+1.0.10 (December 1, 2015)
+	1) Removed error with use of double mysqli_escape_string in DatabaseFunctions.php file 
+	2) Added the function GetFileNameAndExtension to String class
+	3) Added the function DownloadAndParseFile to FileSystem class in utilities package. It allows downloading and parsing files
+	
+1.0.9 (November 27, 2015)
+	1) Updated DatabaseFunctions.php file. Corrected error in group by and order by clause positions
+	2) Added charset parameter to DatabaseFunctions class constructor and class initialization functions
+	3) Added changelog file and example file for DatabaseFunctions class
+	
+1.0.8 (November 26 2015)
+	1) Added check for attachment files to SendEmail function in Email.php file	
+		
+1.0.7 (November 21 2015)
+	1) Added IsUrlValid function to FileSystem.php
+	2) Added html documentation
+	2) Updated GitHub README.md file
+	
+1.0.6 (November 20 2015)
+	1) Added support for mysql group by clause to DatabaseFunctions.php
+	2) Corrected errors in ExampleClass.php
+		
+1.0.5 (October 23 2015)
+	1) Updated class parameters for ErrorHandling class in Utilities package
+	2) Grouped the email parameters for ErrorHandling class
+	3) Added new parameter development_mode to ErrorHandling class
+		
+1.0.4 (October 10 2015)
+	1) Added error handling to ErrorHandler.php
+	
+1.0.3 (October 9, 2015)
+	1) Added is_string attribute to where clause to DatabaseFunctions class
+	2) Added templates to ErrorHandling class for displaying plain text error messages 
+	3) Corrected bugs in ExampleClass.php
+	
+1.0.2 (September 29, 2015)
+	1) Added new utilities class Template.php
+	2) Updated the function GetFileContent in FileSystem.php file
+	3) Updated ErrorHandling.php file so it displays error messages using html template files
+	
+1.0.1 (September 21, 2015)
+	1) Added function SetDbLink to Caching.php
+	2) Updated namespace of all files
+	3) Updated autoload file
+	
+1.0.0 (September 19, 2015)
+	1) Initial release

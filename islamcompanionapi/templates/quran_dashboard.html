@@ -1,0 +1,41 @@
+<div id="ic-holy-quran-navigator-text">
+	<div class='ic-heading'>
+		<table>
+			<tr>
+			  <td class="{division_class}">{division_name}</td>
+			  <td class="sura-class">Sura</td>
+			  <td class="ruku-class">Ruku</td>
+			  <td class="ayat-class">Aya</td>
+			</tr>
+			<tr>
+			  <td class="{division_class}">{division_select_box}</td>
+			  <td class="sura-class">{sura_select_box}</td>
+			  <td class="ruku-class">{ruku_select_box} {total_rukus}</td>
+			  <td class="ayat-class">{ayat_start}-{ayat_end}</td>
+		        </tr>
+		</table>
+	</div>
+	<hr/>
+	<div class='section-padding navigation-section'>
+		{audio_player}
+		{more_options_image}
+		{less_options_image}
+		<div class='{navigator_class}'>			
+			<button class='button button-primary' id='ic-holy-quran-prev'>
+				&laquo; prev 
+			</button>&nbsp;&nbsp;
+			<button class='button button-primary' id='ic-holy-quran-next'>
+				 next &raquo;
+			</button>&nbsp;&nbsp;
+		</div>
+	</div>
+	{translation_dictionary_url}
+	{arabic_dictionary_url}	
+	<div class='section-padding holy-quran-more-options-section ic-hidden'>	
+	  {holy_quran_more_options}
+	</div>
+	<hr class="verse-text-hr"/>
+	{verse_text}
+</div>
+<div id="ic-quran-settings">{navigator_settings}</div>
+<input type="text" name="{clipboard_text_name}" id="{clipboard_text_id}" value="" class="ic-hidden"/>

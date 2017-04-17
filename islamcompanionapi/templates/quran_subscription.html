@@ -1,0 +1,35 @@
+<table id="ic-holy-quran-subscription" class="ic-hidden">
+  <tr>
+    <td>Keywords (Seperate with commas)</td>
+    <td>Number of Ayas</td>
+    <td>Ayat Order</td>
+  </tr>
+  <tr>
+    <td>
+      <input size="30" type="text" name="ic-holy-quran-subscription-keywords" id="ic-holy-quran-subscription-keywords" />
+    </td>
+    <td>
+      {subscription_ayat_count}
+    </td>
+    <td>
+      <select id="ic-holy-quran-subscription-ayat-order" name="ic-holy-quran-subscription-ayat-order">
+        <option value='sequence'>Sequence</option>
+        <option value='random'>Random</option>        
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Times</td>
+    <td>Email Addresses</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+      <input size="30" type="text" name="ic-holy-quran-subscription-times" id="ic-holy-quran-subscription-times"  placeholder="Enter UTC times. e.g 13:30, 8:00, 14:00" value="{subscription_times}"/>
+    </td>
+    <td>
+      <input size="30" type="text" name="ic-holy-quran-subscription-email-addresses" id="ic-holy-quran-subscription-email-addresses" placeholder="Email addresses separated by commas"/>
+    </td>
+    <td>&nbsp;<input type="button" id="ic-holy-quran-subscription-subscribe" name="ic-holy-quran-subscription-subscribe" value="Subscribe"/> &nbsp;<input type="button" id="ic-holy-quran-subscription-unsubscribe" name="ic-holy-quran-subscription-unsubscribe" value="Unsubscribe"/></td>
+  </tr>
+</table>

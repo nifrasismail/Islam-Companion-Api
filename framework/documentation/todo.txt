@@ -1,0 +1,113 @@
+1) Database password encryption
+2) Custom version control using database. It should allow automatic code backup
+3) Add code coverage to test results
+4) Create deployment script for deploying the application
+5) Read about xdebug remote debugging with breakpoints
+6) Rename businessobjectframework to objectframework
+7) Create a application template generator script that creates the right application template depending on user input
+8) Create tools to extract important business logic functions
+9) Use a design pattern to separate the user interface from the data. e.g data can be used in text and graphical user interfaces
+10) Use one render function per layout
+11) Create a tools framework that provides gui and command line tools. user should be able to use the tools from the applications tools page. e.g tools for deploying application, testing application (clear database and test data, run functional tests, run unit tests), edit class diagram, edit database diagram, edit business rules, create new application from template, edit templates, create new templates, simple database editor, workflow task list depending on selected work, simple task editor, mantis bugtracker integration (e.g total number of hours)
+12) Update code so it conforms to psr standards including auto loading standard and logging standard
+13) Create simple template function for displaying html output. e.g for logging function output
+14) Add qunit test runner
+15) Use http://adrai.github.io/flowchart.js/ to create flowcharts from functions
+16) Add annotation tags to function comments for indicating business rule
+17) Make script for reading functions and classes. it should allow version control at the level of functions and classes. it should also allow editing functions for certain business rules
+18) Create tool for online code file editing. Connect error messages to code file
+19) Classes for generating test data automatically
+20) Tools class for transforming data so it provides multiple views
+21) Write articles describing following: how to create a wordpress plugin, how to unit test and functional test your application, how to write a sample web application, how to write a script, how to display html tables, how to use etl class, how to use user interface objects, data objects and data object abstraction, how to use session, api and http authentication
+22) Write a script for version control. it should allow linking each item in the changelog to a file and function. it should also generate a git commit statement for each changed file
+23) Create an API class that derives from the base Application class. it should provide methods for validating function input and returning function output in correct format. add xmlrpc function to API class
+24) Add option to testing class for unit testing single function
+25) Look into possibility of hosting all the code in database
+26) Add admin page that lists the database queries of application
+27) Create admin page for managing projects and tasks
+28) Create admin page for managing goals
+29) Create admin page for learnings. It should allow user to include reminders
+30) Send reminder notifications if some goal is not being met
+
+Reference:
+
+1) http://html5demos.com/dnd-upload
+2) http://php.net/manual/en/language.oop5.inheritance.php
+3) http://php.net/manual/en/function.spl-autoload-register.php
+4) http://phpdoc.org/docs/latest/getting-started/your-first-set-of-documentation.html
+5) http://www.w3schools.com/html/html_form_input_types.asp
+6) http://www.w3schools.com/html/html5_syntax.asp
+7) http://php.net/manual/en/functions.variable-functions.php
+8) http://php.net/manual/en/curl.examples.php
+9) https://github.com/validator/validator/wiki/Service:-Input:-POST-body
+10) http://php.net/manual/en/function.get-class.php
+11) http://php.net/manual/en/function.get-class-methods.php
+12) http://www.dropzonejs.com/
+13) https://phpexcel.codeplex.com/
+14) https://github.com/PHPOffice/PHPExcel/blob/develop/Documentation/markdown/Overview/07-Accessing-Cells.md
+15) http://stackoverflow.com/questions/6048913/in-html5-with-respect-to-tables-what-replaces-cellpadding-cellspacing-valign
+16) http://www.w3schools.com/tags/tag_datalist.asp
+17) http://php.net/manual/en/language.oop5.interfaces.php
+18) http://php.net/manual/en/language.oop5.abstract.php
+19) http://php.net/manual/en/language.oop5.iterations.php
+20) http://php.net/manual/en/function.register-shutdown-function.php
+21) http://php.net/manual/en/language.oop5.late-static-bindings.php
+22) http://php.net/manual/en/mysqli.autocommit.php
+23) http://php.net/manual/en/mysqli.commit.php
+24) http://php.net/manual/en/mysqli.rollback.php
+25) http://www.phptherightway.com/pages/Design-Patterns.html
+26) http://www.w3schools.com/js/js_errors.asp
+27) http://www.w3schools.com/jsref/met_loc_reload.asp
+28) http://php.net/manual/en/function.get-class-methods.php
+29) http://php.net/manual/en/language.namespaces.importing.php
+30) http://stackoverflow.com/questions/4165195/mysql-query-to-get-column-names
+31) http://php.net/manual/en/function.array-replace-recursive.php
+32) http://php.net/manual/en/function.class-exists.php
+33) http://php.net/manual/en/language.types.callable.php
+34) https://en.wikipedia.org/wiki/Business_logic
+35) https://en.wikipedia.org/wiki/Business_rule_management_system
+36) https://en.wikipedia.org/wiki/User_interface_management_systems
+37) http://www.phptherightway.com/pages/Design-Patterns.html
+38) http://www.phptherightway.com/#components
+39) http://php.net/manual/en/function.filter-var.php
+40) http://php.net/security.globals
+41) http://www.fluffycat.com/PHP-Design-Patterns/Abstract-Factory/
+42) http://php.net/manual/en/features.http-auth.php
+43) http://php.net/manual/en/function.call-user-func-array.php
+44) http://php.net/manual/en/function.is-callable.php
+45) http://php.net/manual/en/features.commandline.php
+46) http://xdebug.org/docs/
+47) http://www.php-fig.org/
+48) http://beta.phpformatter.com/
+49) https://help.github.com/articles/adding-a-file-to-a-repository-from-the-command-line/
+50) https://en.wikipedia.org/wiki/Web_application_framework
+51) http://php.net/manual/en/function.getopt.php
+52) http://php.net/manual/en/language.oop5.references.php
+53) http://php.net/manual/en/keyword.parent.php
+54) http://php.net/manual/en/language.oop5.constants.php
+55) http://ruwix.com/simple-javascript-html-css-slider-progress-bar/
+56) http://php.net/manual/en/reflectionclass.getdoccomment.php
+57) http://www.slideshare.net/rdohms/annotations-in-php-they-exist
+58) http://php.net/manual/en/functions.arguments.php
+59) http://php.net/manual/en/class.closure.php
+60) http://php.net/manual/en/simplexmlelement.registerxpathnamespace.php
+61) http://php.net/manual/en/function.mb-detect-encoding.php
+62) http://php.net/manual/en/book.xmlwriter.php
+63) https://support.jwplayer.com/customer/en/portal/articles/1406722-rss-playlist-embed
+64) https://en.wikipedia.org/wiki/XMLHttpRequest
+65) http://php.net/manual/en/migration70.php
+
+Concepts used:
+
+1) late static binding
+2) front controller pattern
+3) dont repeat your self
+4) Abstract factory pattern
+5) push and pull based template generation
+6) wordpress plugin development component
+7) support for unit and functional testing
+8) data source abstraction
+9) dependency inversion
+10) dependency injection
+11) support for writing etl scripts
+12) preventing session hijacking using session_regenerate_id

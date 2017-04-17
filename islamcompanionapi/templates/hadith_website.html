@@ -1,0 +1,51 @@
+<div id="ic-navigator-text">
+    <div class='ic-heading'>
+    <table>
+      <tr>
+        <td class="ic-hadith-options">Options</td>
+        <td class="ic-hadith-widget-options-content" rowspan="2">
+          <div id="ic-hadith-options-content-outer" class="ic-hidden">
+	    <div id="ic-hadith-options-content-inner">
+	      {search_box}
+	      {subscription}   
+	      <table id="ic-hadith-book-title-source">
+		<tr>			        
+ 		  <td class="ic-hadith-book-title-td">Book</td>
+		  <td class="ic-hadith-book-title-td">Title</td>
+		  <td class="ic-hadith-source-td">Source</td>
+		</tr>
+		<tr>
+		  <td class="ic-hadith-book-title-td">{hadith_books_select_box}</td>
+		  <td class="ic-hadith-book-title-td">{hadith_titles_select_box}</td>
+		  <td class="ic-hadith-source-td">{hadith_source_select_box}</td>
+		</tr>
+	      </table>		
+	    </div>
+	  </div>
+        </td>
+        <td class="ic-hadith-widget-navigation">Navigation</td>
+      </tr>
+      <tr>
+        <td>
+          <select name="ic-hadith-more-options" id="ic-hadith-more-options" onchange="hadith_navigator_event_object.SelectOption();">
+            <option value='current_option'>Please Select</option>
+	    <option value="book-title">Book and Title</option>
+	    <option value="source">Source</option>		      
+            <option value="search">Search</option>		                
+	    <option value="subscription">Subscription</option>
+          </select>
+        </td>        
+        <td class="ic-hadith-widget-navigation">
+          <button class='button button-primary' id='ic-hadith-prev'>&laquo; prev</button>&nbsp;&nbsp;
+          <button class='button button-primary' id='ic-hadith-next'>next &raquo;</button>		              
+        </td>
+      </tr>
+    </table>
+  </div>
+	
+<hr class="verse-text-hr"/>
+  {hadith_text}
+</div>
+{dictionary_url}	
+<div id="ic-hadith-settings">{navigator_settings}</div>
+<input type="text" name="{clipboard_text_name}" id="{clipboard_text_id}" value="" class="ic-hidden"/>

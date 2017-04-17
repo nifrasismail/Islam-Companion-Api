@@ -1,0 +1,26 @@
+.toc_container {
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-bottom: 1em;        
+    left: 67%;        
+    font-size: 95%;
+    float: right;    
+    position: fixed;
+}
+
+body {
+	margin-left: 5%;
+	margin-right: 35%;
+	background-color: lightyellow;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.code {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px;
+}

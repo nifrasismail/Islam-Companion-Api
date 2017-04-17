@@ -1,0 +1,7 @@
+{
+    "name": "pakjiddat/utilities-framework",
+    "description": "Provides access to utility objects that perform useful functions such as logging, encrpytion, email and database wrappers",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

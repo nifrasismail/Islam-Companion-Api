@@ -1,0 +1,55 @@
+<div id="ic-navigator-text">
+  <div class='ic-heading'>
+    <table>
+      <tr>
+        <td class="ic-holy-quran-options">Options</td>
+        <td class="ic-quran-widget-options-content" rowspan="2">
+          <div id="ic-holy-quran-options-content-outer" class="ic-hidden">
+	    <div id="ic-holy-quran-options-content-inner">
+     	      {layout}
+	      {search_box}
+	      {subscription}
+	      {settings}
+	      <table>
+		<tr>			        
+		  <td class="ic-holy-quran-sura-ruku-ayat-td {division_class}">{division_name}</td>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td">Sura</td>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td">Ruku</td>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td">Aya</td>          
+		  <td class="ic-holy-quran-audio-td">Audio</td>
+		</tr>
+		<tr>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td {division_class}">{division_select_box}</td>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td">{sura_select_box}</td>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td">{ruku_select_box} {total_rukus}</td>
+		  <td class="ic-holy-quran-sura-ruku-ayat-td">{ayat_start}-{ayat_end}</td>        
+		  <td class="ic-holy-quran-audio-td">{audio_player}</td>
+		</tr>
+	      </table>		
+	    </div>
+	  </div>
+        </td>
+        <td class="ic-holy-quran-widget-navigation">Navigation</td>
+      </tr>
+      <tr>
+        <td>
+          <select name="ic-holy-quran-more-options" id="ic-holy-quran-more-options" onchange="holy_quran_navigator_event_object.SelectOption();">
+            <option value='current-option'>Please Select</option>
+            {options}
+          </select>
+        </td>        
+        <td class="ic-holy-quran-widget-navigation">
+          <input type="button" id="ic-holy-quran-prev" value="&laquo; prev" />&nbsp;&nbsp;
+          <input type="button" id="ic-holy-quran-next" value="next &raquo;"/>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+<hr class="verse-text-hr"/>
+{verse_text}
+</div>
+{translation_dictionary_url}
+{arabic_dictionary_url}	
+<div id="ic-quran-settings">{navigator_settings}</div>
+<input type="text" name="{clipboard_text_name}" id="{clipboard_text_id}" value="" class="ic-hidden"/>

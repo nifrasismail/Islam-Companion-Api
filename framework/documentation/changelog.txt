@@ -1,0 +1,146 @@
+Changelog:
+
+1.2 (June 11, 2016)
+        1) Added support for Php 7
+        2) Corrected error in deleting rows in admin application
+        
+1.1.7 (March 7, 2016)
+	1) Moved all example applications to examples folder
+	2) Added new forms to the admin application
+	
+1.1.6 (March 3, 2016)
+	1) Added the functions, ValidateCredentials and Redirect to Application.php
+	2) Added optional parameter callback to RenderTemplateFile function in Template class
+	3) Added admin project to pak php framework. It allows managing php scripts
+	4) Added a routing function to Application.php. It allows routing requests to an application function
+	5) Added a new class Collection to utilities package. It provides functions for working with collection of items
+	6) Added new classes UiData, StructuredDataUi and UnstructuredDataUi. These classes are used to construct list pages and form pages 
+	
+1.1.5 (February 9, 2016)
+	1) Updated Email.php file in utilities package. Corrected bug in SendEmail function
+	2) Moved ApiAuthentication function from Api.php to Application.php
+	
+1.1.4 (February 8, 2016)
+	1) Updated Reflection.php in utilities package. Corrected bugs in validating method parameters
+	2) Updated DatabaseFunctions.php in utilities package. Added "`" character to table names
+	
+1.1.3 (February 5, 2016)
+    1) Added configuration option for adding wordpress shortcodes
+    2) Added function IsBase64 to String class. It checks if given string is base64 encoded
+    3) Added Widgets class to wordpress package. It allows building wordpress frontend widgets
+    4) Updated DecodeData function of Encryption class. It returns the original data if it cannot be decoded
+    
+1.1.2 (January 26, 2016)
+	1) Added check for no function parameters and no return value to Reflection class in utilities package
+	2) Added ExportToRss function to String class in utilities package. It allows exporting data to rss format
+	3) Added UiApplication class to application package. It is the base class for user interface applications such as tables and forms
+	4) Added userinterface package to basicsite template package. It contains classes for displaying forms and tables based on basicsite theme
+	5) Replaced redundant template generation functions in TemplateEngine.php with the function RenderGeneralTemplate
+	6) Updated the parameters for link.html template file in templates package
+	7) Updated the parameters for GetTableParameters function in HtmlTablePresentation class
+	
+1.1.1 (January 11, 2016)
+    1) Updated functional testing feature so it uses database for storing test data
+    2) Corrected minor bugs in Reflection.php file in utilities package
+    3) Corrected minor bugs in Logging.php file in utilities package
+    4) Updated the sample sql file utilities/data/dev_pakphp.sql
+    
+1.1.0 (January 8, 2016)    
+    1) Added DeleteCustomPosts function to WordPress Application file 
+    2) Corrected minor bugs in RenderHtmlTable function in BasicSiteTemplate.php
+    3) Renamed the object property is_browser_application to context in the class ErrorHandler
+    4) Moved the WordPress package from application namespace to frameworks namespace
+    5) Added two empty functions PreProcessRequest and PostProcessRequest to Application.php
+    6) Added a new class Api which derives from Application class
+    7) Added a new class to the Utilities Framework package called Reflection
+    8) Added new functions df_create_table, df_drop_column and df_rename_column to DatabaseFunctions class
+    9) Added a new class to the object package called DataObjectBackupRestore. It allows the user to backup and restore data. It can be used to create backup and restore scripts
+    10) Added call to session_regenerate_id function in Configuration.php. It reduces chances of session hijacking       
+    11) Updated SaveTestData function in Testing.php file so it saves the test data to database    
+    12) Added a new class called Logging to utilities package. It allows logging test data, variable data, error data and access data
+    13) Removed email, log file and web hooks from ErrorHandler class file
+    14) Added a new class called Profiling to utilities package. It provides profiling information about functions. e.g execution time, stack trace etc
+    15) Added LogErrorToDatabase function to Application.php. It allows saves errors and exceptions to database
+    16) Added the function IsLatestPluginVersionInstalled to Application.php file in wordpress package. It checks if current wordpress plugin is the latest version
+    17) Updated Application.php file in wordpress package, so it deletes plugin options when the plugin is activated or deactivated  
+    
+1.0.14 (December 7, 2015)    
+    1) Corrected bug in Wordpress Application file
+    2) Added user_id configuration option to WordPress DefaultConfiguration.php
+    
+1.0.13 (December 3, 2015)    
+    1) Removed default errorhandling from WordPress configuration 
+    2) Corrected minor php error in WordPress Application file
+    3) Added wordpressexample project    
+    
+1.0.12 (December 1, 2015)    
+    1) In utilities package, removed error with use of double mysqli_escape_string in DatabaseFunctions.php file
+    2) Added default implementation for the functions GetKeyField,SetKeyField,GetData,SetData,Edit,SetReadonly,Get to object/DataObject.php file
+    3) Added new sub class of DataObject called WordPressDataObject
+    4) Removed Load function from DataObject class
+    5) Added the function GetFileNameAndExtension to String class in utilities package. It allows parsing the url of a file and extracting the file name and extension
+    6) Added the function DownloadAndParseFile to FileSystem class in utilities package. It allows downloading and parsing files
+    7) Added the function ImportFile to WordPress Application.php class. It allows importing array data to WordPress posts 
+    
+1.0.11 (November 28, 2015)    
+    1) Added option for disabling error handling from application parameters
+	
+1.0.10 (November 27, 2015)
+    1) Updated DatabaseFunctions.php file in utilities package. Corrected error in group by and order by clause positions
+	2) Added charset parameter to DatabaseFunctions class constructor and class initialization functions
+	3) Added changelog file and example file for DatabaseFunctions class
+    
+1.0.9 (November 26, 2015)
+    1) Added check for attachment files to SendEmail function in Email.php file
+    2) Added pear path to DefaultConfiguration.php
+    3) Added the functions AddNewCustomTaxonomy and AddNewCustomPostType to WordPress Application.php file. The functions allow adding new custom post types and custom taxonomy types  
+    4) Added the configuration option [wordpress][custom_filters] to WordPress DefaultConfiguration.php file
+    5) Added error reporting and timezone default configuration options
+    
+1.0.8 (November 23, 2015)
+    1) Added new MemcacheDataObject class. It allows using a Memcache server as a data source
+    2) Added default functions for session,http and api athentication. Also added default error handler and shutdown functions
+    3) Renamed SetFieldName to SetKeyField and GetFieldName to GetKeyField in the DataObject classes
+    4) Added new function IsUrlValid to FileSystem.php file
+    
+1.0.7 (November 20, 2015)
+    1) Added new DataObjectAbstraction class. It allows using different data sources from a single interface
+    2) Added new DataObjectEtl class. It provides simple functions for writing etl scripts
+
+1.0.6 (October 19, 2015)
+    1) Renamed application configuration variables
+    2) Removed some of the html templates from templates/html folder
+    3) Corrected bug in saving test results in Testing.php file
+    4) Corrected bug in saving test data in Testing.php file
+    
+1.0.5 (October 6, 2015)
+    1) Renamed frontcontroller namespace to webapplication
+    2) Added presentation object to UiObject class
+    3) Created a new namespace called templates. Added basicsite template to the template namespace
+    4) Added HtmlTablePresentation abstract class to the basicsite template. It can be used as presentation object in applications that work with tables    
+    
+1.0.4 (October 4, 2015)
+    1) Updated ErrorHandling.php file so it displays error messages using html template files
+    2) Organized configuration options into categories
+    
+1.0.3 (October 1, 2015)
+    1) Renamed browser application folder to frontendcontroller. Moved presentation, testing and template files to frontendcontroller folder
+    2) Created new framework module called api
+    3) Added new utilities class file Template.php
+    4) Added new framework module called wordpress
+    
+1.0.2 (September 22, 2015)
+	1) Changed file system structure so all fully qualified class names follow the file system structure
+	2) Updated namespaces of all the classes
+	3) Updated framework example application
+	4) Removed template and vendors folders. Renamed include folder to framework
+	5) Updated file system structure so the example application, framework folder, index.php and autoload.php are at the base of the application folder at the same folder level.
+	
+1.0.1 (September 21, 2015)
+	1) Changed all files names and class names to CamelCase
+	2) Updated autoload.php so it complies with PSR-0 and PSR-4
+	3) Corrected minor bugs in FileSystem.php
+	4) Added asserts to ApplicationTesting.php file
+	
+1.0.0 (September 21, 2015)
+	1) Initial release

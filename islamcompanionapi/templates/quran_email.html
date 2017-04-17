@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>{title}</title>
+      {font_tags}
+<style>      
+/*********************************************************************************************************/
+/**
+ * The CSS classes for the verse list numbers
+ */
+/*********************************************************************************************************/
+.persian {
+  list-style-type: persian;
+}
+.amharic {
+  list-style-type: amharic;
+}
+
+.arabic-indic {
+  list-style-type: arabic-indic;
+  font-family:amiri-quran;
+}
+
+.no-numbers {
+  list-style-type: none;
+}
+
+.bengali {
+  list-style-type: bengali;
+  font-family: hind-siliguri;
+}
+
+.sindhi {
+  font-size: 18pt;
+  list-style-type: urdu;
+}
+
+.tamil {
+  font-family: tamil;
+}
+
+.disc {
+  list-style-type: disc;
+}
+
+.lower-norwegian {
+  list-style-type: lower-norwegian;
+}
+
+.malayalam {
+  font-family: malayalam;
+  list-style-type: malayalam;
+}
+
+.somali {
+  list-style-type: somali;
+}
+
+.thai {
+  font-family: thai;
+  list-style-type: thai;
+}
+
+.hindi {
+  font-family: hindi;
+  list-style-type: devanagari;
+}
+
+.decimal {
+  list-style-type: decimal;
+}
+
+.urdu {
+  list-style-type: urdu;
+  font-family: NafeesWeb;
+}
+
+.devehi {
+  font-family: devehi;
+}
+
+.korean {
+  font-family: korean;
+  font-size: 18pt;
+}
+
+/** Firefox specific style */
+@-moz-document url-prefix() {
+  .urdu {
+    list-style-type: -moz-urdu;
+    font-family: NafeesWeb;
+  }
+}
+/*********************************************************************************************************/
+/**
+ * CSS classes for the verse and hadith sections
+ */
+/*********************************************************************************************************/
+
+.ic-rtl-text {	
+  font-size: 14pt;	
+  direction:rtl;
+  line-height:40px;
+  text-align:right;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.ic-arabic-text {
+  line-height:50px;
+  font-size: 14pt;	
+  text-align:right;
+  word-wrap: break-word;
+  font-weight: bold;
+  font-family:amiri-quran;
+  margin-left: 40px;
+}
+
+.ic-ltr-text {
+  direction:ltr;
+  text-align:left;
+  word-wrap: break-word;
+  font-weight: bold;
+  line-height: 40px;
+  margin-top: 0px;
+}
+
+.verse-table {
+  width: 100%;
+}
+
+.verse-table > tbody > tr > td {
+  width: 50%;
+  vertical-align: top;
+}
+
+.verse-table > tbody > tr > td, .verse-table {
+  text-align: right;
+  border: 0;
+  vertical-align: top;
+}
+
+body {
+    padding-right: 15px;
+}
+
+#verse-meta {
+    width: 50%;
+    float: left;
+}
+
+.verse-meta-td-left {
+    width: 10%;
+}
+
+.verse-meta-last-row {
+    column-count: 2;
+}
+
+footer {
+    text-align: center;
+}
+
+.ayat-meta-data {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+h2, caption, #verse-meta {
+  text-align: center;
+}
+
+#verse-meta, #subscription-meta {
+  text-align: left;
+  width: 100%;
+  padding-left: 15%;
+}
+</style>
+   </head>
+   <body>
+   <header>
+     <h2>Holy Quran</h2>
+   </header>
+   <hr/>
+   <table id="verse-meta">
+     <tbody>
+       <tr>
+         <td>Narrator: </td>
+         <td><b>{narrator}</b></td>
+         <td>Language: </td>
+         <td><b>{language}</b></td>
+         <td>Sura: </td>
+         <td><b>{sura}</b></td>
+         <td>Ayas: </td>
+         <td><b>{start_ayat} - {end_ayat}</b></td>         
+       </tr>
+     </tbody>
+   </table>
+   <hr/>
+   <article>
+     {body}
+   </article>
+   <hr/>
+   <table id="subscription-meta">
+     <caption><b>Current Subscription</b></caption>
+     <tbody>
+       <tr>
+         <td>Keywords: </td>
+         <td><b>{ayat_keywords}</b></td>
+         <td>Times: </td>
+         <td><b>{ayat_times}</b></td>
+         <td>Number of Ayas: </td>
+         <td><b>{ayat_count}</b></td>
+       </tr>          
+       <tr>
+         <td>Email Addresses: </td>
+         <td><b>{email_addresses}</b></td>
+         <td>Ayat Order: </td>
+         <td><b>{ayat_order}</b></td>
+         <td>Unsubscribe: </td>
+         <td><b><a href='{unsubscribe_link}'>Unsubscribe</a></b></td>
+       </tr>
+     </tbody>
+   </table>
+   <hr/>
+   <footer>
+       Powered by <a href='http://www.islamcompanion.org'>Islam Companion</a>
+   </footer>
+   </body>
+</html>

@@ -1,0 +1,33 @@
+<div id="ic-hadith-navigator-text">
+	<div class='ic-heading'>
+		<table>
+			<tr><td class="{hadith_books_class}">Book</td><td class="{hadith_titles_class}">Title</td></tr>
+			<tr><td class="{hadith_books_class}">{hadith_books_select_box}</td><td class="{hadith_titles_class}">{hadith_titles_select_box}</td></tr>
+		</table>		  
+	</div>
+	<hr/>
+	<div class='section-padding navigation-section'>		
+	<table class="hadith-navigation-section-table">
+			<tr><td class="{hadith_source_class}">{hadith_source_select_box}</td>
+			<td class="options-buttons">
+	 	        {more_options_image}
+	 	        {less_options_image}
+			</td>
+			<td class="hadith-navigation-buttons {navigator_class}">
+			<button class='button button-primary' id='ic-hadith-prev'>
+				&laquo; prev 
+			</button>&nbsp;&nbsp;
+			<button class='button button-primary' id='ic-hadith-next'>
+				 next &raquo;
+			</button>&nbsp;&nbsp;
+		</td></tr></table>
+	</div>
+	{dictionary_url}
+	<div class='section-padding hadith-more-options-section ic-hidden'>	
+	  {hadith_more_options}
+	</div>
+	<hr class="hadith-text-hr"/>
+	{hadith_text}
+</div>
+<div id="ic-hadith-settings">{navigator_settings}</div>
+<input type="text" name="{clipboard_text_name}" id="{clipboard_text_id}" value="" class="ic-hidden"/>

@@ -1,0 +1,29 @@
+<script>
+var direction = 'decrease';
+var opacity = 1;
+var counter = 0;
+var verse_text_arr = Array({verse_text});
+var container_id = "{container_id}";     
+
+function StartSlideShow() {         
+    document.getElementById(container_id).innerHTML = verse_text_arr[counter];
+    
+    if (counter >= (verse_text_arr.length-1)) {
+        counter = 0;
+    }
+    else counter++;
+}
+
+function UpdateOpacity() {
+
+    if (direction == 'decrease') opacity-= 0.05;
+    else opacity+= 0.05;
+    
+    if (opacity <= 0.05) direction = 'increase';
+    if (opacity >= 1.00) direction = 'decrease';
+    
+    document.getElementById(container_id).style.opacity = opacity;
+}
+
+setInterval("StartSlideShow()", 5000);
+</script>

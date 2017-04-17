@@ -1,0 +1,22 @@
+Changelog for Islam Companion Api:
+
+3.0.0 (17th April, 2017)
+    * Added documentation for Islam Companion Api
+    * Tested each API function call and published the source code on Git Hub
+    
+2.2.0 (2nd January, 2017)
+    * Added email subscription feature to Islam Companion API. It allows sending Holy Quran and Hadith by email
+    * Updated Islam Companion API code so it is more organized
+        
+2.1.0 (5th February, 2016)
+    * Added GetVerseText function to Islam Companion api for fetching Holy Quran verses and audio player. This function is used by the shortcode and widget
+    * Corrected errors in error handling in Islam Companion api  
+    
+2.0.2 (30th January, 2016)
+    * Corrected errors in audio player
+    
+2.0.1 (30th January, 2016)
+    * Updated data_type parameter to AddHolyQuranMetaData function in WordPressQuranicDataImport.php
+    
+2.0.0 (29th January, 2016)
+    * Initial release 
