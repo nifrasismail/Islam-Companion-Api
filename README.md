@@ -12,8 +12,8 @@ The Islam Companion API is written in Php language.
 ### Installation
 1. Download the Islam Companion API files from Git Hub using the command: git clone https://github.com/nadirlc/Islam-Companion-Api.git or download the zip file: https://github.com/nadirlc/Islam-Companion-Api/archive/master.zip.
 2. Copy the files to the folder from where they will be read by your web server.
-3. Import the database file located inside islamcompanionapi/data/database/dev_islamcompanion.sql. Enter your database connection information in the file: islamcompanionapi/Configuration.php on line 352.
-4. The file islamcompanionapi/documentation/examples.txt contains examples on how to use the API. Copy and paste one of the urls to your browser. Replace http://dev.islamcompanion.org with your own domain name.
+3. Download the database file from http://www.islamcompanion.org/islamcompanionapi/data/islamcompanion.sql. Import the database file to your server. Enter the database connection information for the imported database to the file: islamcompanionapi/Configuration.php on line 352.
+4. Read the API documentation.
 
 ### Frequently asked questions:
 **What is the Islam Companion Api.** It is a RESTFul API for accessing Holy Quran and Hadith data
