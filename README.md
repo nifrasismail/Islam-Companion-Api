@@ -24,7 +24,7 @@ The Islam Companion API is written in Php language.
 
 **What functions are provided by the Islam Companion Api.** Please read the documentation for the Islam Companion Api.
 
-**Where does the plugin get its data.** The plugin uses Holy Quran translations from [http://tanzil.net/trans/](Tanzil.net) and Holy Quran audio from [http://www.quranurdu.com/] (Quran Urdu). It uses Hadith data from [http://hadithcollection.com/]  (Hadith Collection)
+**Where does the plugin get its data.** The plugin uses Holy Quran translations from http://tanzil.net/trans/ and Holy Quran audio from http://www.quranurdu.com/. It uses Hadith data from http://hadithcollection.com/.
 
 ### Support
 You are welcome to contact us for any support. We can help you with installing the Islam Companion Api and integrating it with your project. You can email your question to: nadir@pakjiddat.pk
